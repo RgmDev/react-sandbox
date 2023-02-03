@@ -39,16 +39,20 @@ class ToDoList extends React.Component {
   render() {
     return (
       <div className="container py-5">
-        <h1 className="text-center"><i class="bi bi-list-check"></i> To Do List</h1>
-        <div className="mb-3">
-          <form onSubmit={ this.addItem }>
-            <div className="input-group d-flex ">
-              <input type="text" className="form-control" placeholder="Introduce una tarea" value={this.state.value} onChange={this.handleChange} ref={this.input} />
-              <button type="submit" className="btn btn-primary">Añadir tarea</button>
+        <div className="row justify-content-md-center">
+          <div className="col-12 col-md-8">
+            <h1 className="text-center"><i class="bi bi-list-check"></i> To Do List</h1>
+            <div className="mb-3">
+              <form onSubmit={this.addItem}>
+                <div className="input-group d-flex ">
+                  <input type="text" className="form-control" placeholder="Introduce una tarea" value={this.state.value} onChange={this.handleChange} ref={this.input} />
+                  <button type="submit" className="btn btn-primary">Añadir tarea</button>
+                </div>
+              </form>
             </div>
-          </form>
+            <ToDoItems entries={this.state.items} delete={this.deleteItem} />
+          </div>
         </div>
-        <ToDoItems entries={ this.state.items } delete={ this.deleteItem }/>
       </div>
     )
   }
