@@ -11,12 +11,12 @@ const TenureSelect = ({ data, setData }) => {
 
   return (
   <FormControl fullWidth>
-    <InputLabel id="demo-simple-select-label">Tenure</InputLabel>
+    <InputLabel id="demo-simple-select-label">Duración del préstamo</InputLabel>
     <Select
       labelId="demo-simple-select-label"
       id="demo-simple-select"
       value={data.loanTerm}
-      label="Tenure"
+      label="Duración del préstamo"
       defaultValue={5}
       onChange={handleChange}
     >

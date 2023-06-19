@@ -18,9 +18,9 @@ const SliderSelect = ({ data, setData }) => {
         min={1000}
         max={bank_limit}
         steps={100}
-        unit="$"
+        unit="€"
         amount={data.homeValue}
-        label="Home Value"
+        label="Valor de la vivienda"
         value={data.homeValue}
       />
       <SliderComponent
@@ -35,9 +35,9 @@ const SliderSelect = ({ data, setData }) => {
         min={0}
         max={data.homeValue}
         steps={100}
-        unit="$"
+        unit="€"
         amount={data.downPayment}
-        label="Down Payment"
+        label="Entrada"
         value={data.downPayment}
       />
 
@@ -53,9 +53,9 @@ const SliderSelect = ({ data, setData }) => {
         min={0}
         max={data.homeValue}
         steps={100}
-        unit="$"
+        unit="€"
         amount={data.loanAmount}
-        label="Loan Amount"
+        label="Valor del préstamo"
         value={data.loanAmount}
       />
       <SliderComponent
@@ -71,7 +71,7 @@ const SliderSelect = ({ data, setData }) => {
         steps={0.5}
         unit="%"
         amount={data.interestRate}
-        label="Interest Rate"
+        label="Interés"
         value={data.interestRate}
       />
     </div>

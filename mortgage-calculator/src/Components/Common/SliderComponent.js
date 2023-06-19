@@ -19,7 +19,7 @@ const SliderComponent = ({
       <Stack gap={1}>
         <Typography variant="subtitle2">{label}</Typography>
         <Typography variant="h5">
-          {unit} {amount}
+          {amount} {unit}
         </Typography>
       </Stack>
       <Slider
@@ -35,10 +35,10 @@ const SliderComponent = ({
       />
       <Stack direction="row" justifyContent="space-between">
         <Typography variant="caption" color="text.secondary">
-          {unit} {min}
+          {min} {unit}
         </Typography>
         <Typography variant="caption" color="text.secondary">
-          {unit} {max}
+          {max} {unit}
         </Typography>
       </Stack>
     </Stack>

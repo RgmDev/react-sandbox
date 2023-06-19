@@ -12,10 +12,10 @@ const Result = ({ data }) => {
   const monthlyPayment = (loanAmount * interestPerMonth * (1 + interestPerMonth) ** totalLoanMonths) / ((1 + interestPerMonth) ** totalLoanMonths - 1);
   const totalInterestGenerated = monthlyPayment * totalLoanMonths - loanAmount;
   const pieChartData = {
-    labels: ["Principle", "Interest"],
+    labels: ["Principal", "Interés"],
     datasets: [
       {
-        label: "Ratio of Principle and Interest",
+        label: "Ratio de Principal e Interés",
         data: [homeValue, totalInterestGenerated],
         backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)"],
         borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
@@ -27,7 +27,7 @@ const Result = ({ data }) => {
   return (
   <Stack gap={3}>
     <Typography textAlign="center" variant="h5">
-      Monthly Payment: $ {monthlyPayment.toFixed(2)}
+      Pago mensual: {monthlyPayment.toFixed(2)} €
     </Typography>
     <Stack direction="row" justifyContent="center">
       <div>
